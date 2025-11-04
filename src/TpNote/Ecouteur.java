@@ -31,5 +31,15 @@ public class Ecouteur extends Utilisateur  {
 
     public double getSolde() { return solde; }
 
+	public void ecouterTitre(Cover cover) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void ecouterTitre(Remix remix) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

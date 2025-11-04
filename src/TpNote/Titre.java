@@ -19,7 +19,9 @@ public class Titre {
 	        this.enAttente = false;
 	    }
 
-	    public String getNom() { return nom; }
+	    
+
+		public String getNom() { return nom; }
 	    public double getDuree() { return duree; }
 	    public Artiste getArtiste() { return artiste; }
 
