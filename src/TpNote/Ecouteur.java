@@ -3,9 +3,8 @@ package TpNote;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ecouteur extends Utilisateur  {
-
-	private double solde;
+public class Ecouteur extends Utilisateur {
+    private double solde;
     private boolean hd;
     private List<Playlist> playlists;
 
@@ -20,8 +19,16 @@ public class Ecouteur extends Utilisateur  {
         double cout = (hd ? 0.03 : 0.02) * (t.getDuree() / 5.0);
         solde += cout;
         t.getArtiste().recevoirPaiement(cout * 0.66);
-        System.out.printf("%s écoute '%s' (%.2f € facturé)%n", nom, t.getNom(), cout);
+        System.out.printf("%s écoute '%s' (%.2f € facturé)%n", getNom(), t.getNom(), cout);
         return cout;
+    }
+
+    public double ecouterTitre(Cover cover) {
+        return ecouterTitre((Titre) cover);
+    }
+
+    public double ecouterTitre(Remix remix) {
+        return ecouterTitre((Titre) remix);
     }
 
     public void creerPlaylist(String nom) {
@@ -29,17 +36,7 @@ public class Ecouteur extends Utilisateur  {
         System.out.println("Playlist créée : " + nom);
     }
 
-    public double getSolde() { return solde; }
-
-	public void ecouterTitre(Cover cover) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void ecouterTitre(Remix remix) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
+    public double getSolde() {
+        return solde;
+    }
 }

@@ -1,10 +1,8 @@
 package TpNote;
 
 public class Spotizer {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Artiste daftPunk = new Artiste("Daft Punk", "daft@spotizer.com", "1234");
+    public static void main(String[] args) {
+        Artiste daftPunk = new Artiste("Daft Punk", "daft@spotizer.com", "1234");
         Artiste djSnake = new Artiste("DJ Snake", "snake@spotizer.com", "abcd");
 
         // Création des titres
@@ -15,9 +13,9 @@ public class Spotizer {
         daftPunk.ajouterTitre(original);
         djSnake.ajouterTitre(remix);
 
-        // Création d’un album
-        Album album = new Album("Discovery", daftPunk, "visuel.jpg");
+        Album album = new Album("Discovery", "visuel.jpg", daftPunk, false);
         album.ajouterTitre(original);
+
 
         // Création d’un utilisateur écouteur
         Ecouteur user = new Ecouteur("Alice", "alice@spotizer.com", "xyz", true);
@@ -38,5 +36,4 @@ public class Spotizer {
         System.out.printf("Revenus artiste (%s) : %.2f €%n", daftPunk.getNom(), daftPunk.getRevenus());
         System.out.printf("Revenus artiste (%s) : %.2f €%n", djSnake.getNom(), djSnake.getRevenus());
     }
-	}
-
+}
